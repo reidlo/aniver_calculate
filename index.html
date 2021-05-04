@@ -28,7 +28,7 @@
             </div>
     </section>
     <section class="special-day">
-        <h3 class="title">1000일</h3>
+        <h3 class="title">2000일</h3>
         <div class="date-box">
             <p id="thousand" class="days-left">0일 남음</p>
             <p id="thousand-date" class="date">0000.00.00</p>
@@ -48,12 +48,9 @@
         var ms = start.getTime() + 999 * (1000*60*60*24);
         var thousand = new Date(ms);
         var thousandDate = 
-            thousand.getFullYear() + '.' + (thousand.getMonth()+1) + '.' + thousand.getDate();
+            thousand.getFullYear() + '.' + (thousand.getMonth()+1) + '.' + (thousand.getDate()+1);
             $("#thousand-date").text(thousandDate);
-
-        var timeDiff1000 = thousand.getTime() - now.getTime();
-        var day1000 = Math.floor(timeDiff1000 / (1000*60*60*24) + 1);
-        $("#thousand").text(day1000 + '일 남음');
+        $("#thousand").text(2000 - day + '일 남음')
     </script>
 </body>
 </html>
